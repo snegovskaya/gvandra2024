@@ -1,9 +1,11 @@
 
-*.pdf
 *.gz
 *.bbl
 *.blg
-latex-report/Gvandra2024_Snegovskaya.pdf
+latex-report/*.pdf
 latex-report/Gvandra2024_Snegovskaya.synctex.gz
 *.log
 *.aux
+*tmp
+*.out
+*.toc

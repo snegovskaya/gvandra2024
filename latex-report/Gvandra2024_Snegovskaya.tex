@@ -1,4 +1,5 @@
 \documentclass[a4paper, 12pt]{report}
+\usepackage{hyperref}
 \usepackage[utf8]{inputenc} % выбор кодировки кода
 \usepackage[T1, T2A]{fontenc} % выбор внутренней кодировки 
 \usepackage[english, russian]{babel} % выбор языка
@@ -26,11 +27,13 @@
 \usepackage{comment} % Для многострочных комментариев
 \usepackage{xcolor} % Для девочек 
 
+
+
 \begin{document}
-\section{Таблица маршрута} 
-Тут я перекатаю плоды Лёшиного труда
-\section{Участники} 
-Тут будет список наших \sout{долбанов} зайчиков.
+\input{titlepage}
+\tableofcontents
+\input{generalInfo}
+
 \section{Концепт (типа abstract)} 
 Тут будет что-то про красоток природы и про то, какая я в целом продуманная молодец.
 \section{Литературный обзор}
@@ -51,7 +54,14 @@
 
 \subsection{пер. Хотютау (1А, 3546)} 
 
+\appendix
+\section{Перевальные записки}
+\section{Список снаряжения}
+\section{Расходы на группу}
+
 \bibliography{Gvandra2024_Snegovskaya.bib}
 \bibliographystyle{plain}
+
+
 
 \end{document}
