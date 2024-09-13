@@ -10,3 +10,4 @@ latex-report/Gvandra2024_Snegovskaya.synctex.gz
 *.out
 *.toc
 *.psd
+!*/Gvandra2024_Snegovskaya.pdf
