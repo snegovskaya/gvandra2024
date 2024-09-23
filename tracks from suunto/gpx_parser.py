@@ -28,7 +28,7 @@ from geopy.distance import great_circle
 gpx_file = open('gvandra_merged_suunto.gpx', 'r')
 
 gpx = gpxpy.parse(gpx_file)
-gpx.smooth
+gpx.reduce_points(10000)
 # times = []
 # elevations = []
 # for track in gpx.tracks:
@@ -141,7 +141,8 @@ passes = {
 
 
 
-# %%
+# %% distance plot
+
 fig, ax = plt.subplots(figsize=(15, 6))
 my_params = {'font.size':24}
 plt.rcParams.update(my_params)
@@ -155,6 +156,25 @@ ax.set_xlim(0, 120)
 for count, name in enumerate(passes.keys()):
     ax.annotate(name, (df.dist.iloc[passes[name]['point_num']],
                        passes[name]['elevation']))
+    
+# %% time plot
+
+fig, ax = plt.subplots(figsize=(15, 6))
+my_params = {'font.size':24}
+plt.rcParams.update(my_params)
+ax.plot(times ,elevations,'b',label = "Elevation",
+        linewidth=5)
+ax.set_xlabel("Время, дни")
+ax.set_ylabel("Высота, м") 
+raw_days_list = [datetime.day for datetime in times] 
+days_list = 
+ax.set_xticks([datetime.day for datetime in times].)
+# ax.grid()
+ax.set_ylim(1400, 3700)
+# ax.set_xlim(0, 120)
+for count, name in enumerate(passes.keys()):
+    ax.annotate(name, (times[passes[name]['point_num']],
+                       passes[name]['elevation']))
 
 # %%
-fig.savefig('../pics/elevation_vs_distance.pdf')
+# fig.savefig('../pics/elevation_vs_time.pdf')
