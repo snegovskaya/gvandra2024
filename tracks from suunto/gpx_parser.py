@@ -17,6 +17,9 @@ import pandas as pd
 from scipy import ndimage
 from scipy import interpolate
 from scipy import signal
+from matplotlib.ticker import MaxNLocator, AutoMinorLocator, FuncFormatter
+from matplotlib.dates import DateFormatter
+
 
 import gpxpy
 import gpxpy.gpx
@@ -166,9 +169,10 @@ ax.plot(times ,elevations,'b',label = "Elevation",
         linewidth=5)
 ax.set_xlabel("Время, дни")
 ax.set_ylabel("Высота, м") 
-raw_days_list = [datetime.day for datetime in times] 
-days_list = 
-ax.set_xticks([datetime.day for datetime in times].)
+
+date_form = DateFormatter("%d")
+ax.xaxis.set_major_locator(MaxNLocator(500, integer=True))
+ax.xaxis.set_major_formatter(date_form)
 # ax.grid()
 ax.set_ylim(1400, 3700)
 # ax.set_xlim(0, 120)
