@@ -2,7 +2,6 @@
 *.gz
 *.bbl
 *.blg
-latex-report/*.pdf
 latex-report/Gvandra2024_Snegovskaya.synctex.gz
 *.log
 *.aux
@@ -11,3 +10,6 @@ latex-report/Gvandra2024_Snegovskaya.synctex.gz
 *.toc
 *.psd
 */Gvandra2024_Snegovskaya.pdf
+*.fls
+*.pdf
+*.fdb_latexmk
