@@ -34,7 +34,16 @@
 \usepackage{comment} % Для многострочных комментариев
 \usepackage{xcolor} % Для девочек 
 
-
+\usepackage[
+natbib		= true,
+style		= gost-numeric,
+sorting		= none,
+backend		= biber,
+language	= autobib,
+bibstyle	= gost-numeric,
+citestyle	= gost-numeric,
+autolang	= other]{biblatex}
+\addbibresource{Gvandra2024_biblio.bib}
 
 \begin{document}
 \input{titlepage}
@@ -52,8 +61,8 @@
 \input{passNotes}
 
 
-\bibliography{Gvandra2024_Snegovskaya.bib}
-\bibliographystyle{plain}
+%\bibliography{Gvandra2024_Snegovskaya.bib}
+\printbibliography
 
 
 
