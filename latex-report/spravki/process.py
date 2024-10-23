@@ -17,12 +17,12 @@ def generate_file(template, id, user):
     print(f'Generated {filename}')
     subprocess.call(['latexmk', '-pdf', filename])
 
-with open('spravka_template.tex', encoding='utf-8') as template_file:
+with open('spravka_template_sliv.tex', encoding='utf-8') as template_file:
     global latex_code
     latex_code = template_file.read()
     print (latex_code)
 
-with open('input.csv', encoding='utf8') as csv_file:
+with open('input_sliv.csv', encoding='utf8') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
