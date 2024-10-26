@@ -25,6 +25,7 @@
 \titleformat{\section}{\centering \large \bfseries}{\thesection}{1ex}{\MakeUppercase}{}
 \titleformat{\subsection}{\centering \large \bfseries}{\thesubsection}{1ex}{}{}
 \titleformat{\subparagraph}[runin]{\bfseries}{\thesubparagraph}{}{}{}
+
 % \titleformat{\bibliography}{\centering \large \bfseries}{\thebibliography}{}{}{} % попытка настроить заголовок для списка литературы
 
 \usepackage{graphicx}
@@ -33,6 +34,7 @@
 
 \usepackage{comment} % Для многострочных комментариев
 \usepackage{xcolor} % Для девочек 
+\usepackage{enumitem}
 
 \usepackage[
 natbib		= true,
@@ -47,6 +49,7 @@ autolang	= other]{biblatex}
 
 \begin{document}
 \input{titlepage}
+\renewcommand{\contentsname}{Содержание}
 \tableofcontents
 \input{reductions}
 \input{generalInfo}
