@@ -14,3 +14,5 @@ latex-report/Gvandra2024_Snegovskaya.synctex.gz
 *.pdf
 *.fdb_latexmk
 latex-report/spravki/tmpb23hfvqx
+*.bcf
+*.xml
