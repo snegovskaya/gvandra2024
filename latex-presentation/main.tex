@@ -25,11 +25,21 @@
 ]{beamer}
 \usepackage[english, russian]{babel} % выбор языка
 
-
+\newcommand\rozhasize{0.17\textwidth}
+\newcommand\namesize{0.18\textwidth}
+\newcommand\fourpicsize{0.49\textwidth}
+\usepackage{makecell}
+\usepackage{tabularx}
+\renewcommand{\cellalign}{vh}
+\renewcommand{\theadalign}{vh}
+\newcommand{\specialcell}[2][c]{%
+	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
 \graphicspath{{Images/}{./}} % Specifies where to look for included images (trailing slash required)
-
+\definecolor{darkred}{HTML}{8b0000}
+\definecolor{darkblue}{HTML}{00008B}
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule for better rules in tables
 \usepackage{rotating}
+\usepackage{wasysym}
 %----------------------------------------------------------------------------------------
 %	SELECT LAYOUT THEME
 %----------------------------------------------------------------------------------------
@@ -144,7 +154,7 @@
 %	PRESENTATION INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title[1 к.с. Гвандра 2024]{Рассказ о горном спортивном походе 1 к.с. по Западному Кавказу (Гвандра)} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
+\title[1 к.с. Гвандра 2024]{Рассказ о горном спортивном походе 1~к.с. по Западному Кавказу (Гвандра)} % The short title in the optional parameter appears at the bottom of every slide, the full title in the main parameter is only on the title page
 
 \subtitle{чё-нить мемное сюды} % Presentation subtitle, remove this command if a subtitle isn't required
 
@@ -183,98 +193,137 @@
 	%	PRESENTATION BODY SLIDES
 	%----------------------------------------------------------------------------------------
 	
-	\section{Text Examples} % Sections are added in order to organize your presentation into discrete blocks, all sections and subsections are automatically output to the table of contents as an overview of the talk but NOT output in the presentation as separate slides
+	\section{Общая информация} % Sections are added in order to organize your presentation into discrete blocks, all sections and subsections are automatically output to the table of contents as an overview of the talk but NOT output in the presentation as separate slides
 	
 	%------------------------------------------------
+	\subsection{Состав группы}
+
+\begin{frame}
+	\frametitle{Состав группы}
+	\begin{tabular}{ccccc}
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/dasha_s}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/dasha_k}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/masha2}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/lesha_o1}
+	\end{minipage} & 
+	\begin{minipage}{\namesize}
+		{\tiny
+		Даша Снеговская\\
+		Даша Казаринова\\
+		Маша Семено\\
+		Лёша Остапив}
+		\end{minipage} \\
 	
-	\subsection{Paragraphs and Lists}
+	\hline
+	\begin{minipage}{\rozhasize}
+	\includegraphics[width=\textwidth]{../pics/portraits/dima_d}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/dima_s2}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/katya}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/ilya_sh}
+	\end{minipage} & 
+	\begin{minipage}{\namesize}
+		{\tiny
+			Дима Дёмушкин\\
+			Дима Сингалевич\\
+			Катя Тюрина\\
+			Илья Шалфеев}
+	\end{minipage} \\
+	
+	\hline
+	\begin{minipage}{\rozhasize}
+	\includegraphics[width=\textwidth]{../pics/portraits/vika}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/natasha1}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/dasha_m}
+	\end{minipage} &
+	\begin{minipage}{\rozhasize}
+		\includegraphics[width=\textwidth]{../pics/portraits/gosha}
+	\end{minipage} & 
+	\begin{minipage}{\namesize}
+		{\tiny
+			Вика Суровцева\\
+			Наташа Миронова\\
+			Даша Мерзликина\\
+			Гоша Корнилов}
+	\end{minipage} \\	
+\end{tabular}	
+\end{frame}
+	
+	\subsection{Идея похода}
+	\begin{frame}
+	\frametitle{Почему Гвандра?}
+	\begin{itemize}
+		\item Дёшево и быстро ехать
+		\item Красиво и разнообразно
+		\item Посмотреть Эльбрус
+		\item Скатать у Королlove
+	\end{itemize}
+	\textbf{Идея похода}~--- пройти чисто, при условии, что группа новичковая
+	\end{frame}
+	
+	\subsection{Список препятствий}
+	\begin{frame}
+		\setbeamercovered{transparent}
+		\frametitle{Список препятствий}
+		\begin{enumerate}
+			\item<+-> Уллу-Кёль Восточный, 3050 (1А)
+			\item<+-> Джалпаккол Северный, 3411  (1А)
+			\item<+-> Кичкинекол Малый, 3206 (1А)
+			\item<+-> Перемётный, 3255 (1А)
+			\item<+-> Хотютау, 3546 (1А)
+		\end{enumerate}
+	\centering
+	\includegraphics<1>[height=0.5\textheight]{../pics/portraits/vika}%
+	\includegraphics<1>[height=0.5\textheight]{../pics/portraits/vika}%
+	\includegraphics<3>[height=0.5\textheight]{../pics/passes/kich}%
+	\includegraphics<4>[height=0.5\textheight]{../pics/passes/perem}%
+	\includegraphics<5>[height=0.5\textheight]{../pics/passes/hot}%
+
+	\end{frame}
+	
+	\subsection{Трек}
 	
 	\begin{frame}
 		\frametitle{Трек}
 		\rotatebox{90}{
-			\includegraphics[width=0.68\linewidth]{../pics/map}}
-		
+			\includegraphics[width=0.68\linewidth]{../pics/map}}		
 	\end{frame}
 	
 	%------------------------------------------------
 	\section{Отчёт по дням}
 	
-	\begin{frame}
-		\frametitle{День 1. 18 августа}
-		\framesubtitle{Старт~--- д.р. Кичкинакол Уллукёльский} % Optional subtitle
-			\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-			\begin{column}{0.45\textwidth} % Left column width
-				\begin{itemize}
-					\item Перепаковка, формирование заброски
-					\item Aliquam blandit faucibus nisi, sit amet dapibus enim tempus
-					\item Nulla commodo, erat quis gravida posuere, elit lacus lobortis est, quis porttitor odio mauris at libero
-				\end{itemize}
-
-			\end{column}
-			\begin{column}{0.5\textwidth} % Right column width
-				\centering
-				\includegraphics[width=\linewidth]{../pics/mini_maps/18}
-			\end{column}
-		\end{columns}
-	\end{frame}
+	\input{18}
+	\input{19}
+	\input{20}
+	\input{21}	
+	\input{22}
+%	\input{23}
+%	\input{24}
+%	\input{25}
+%	\input{26}
+%	\input{27}
+%	\input{28}
+%	\input{29}
+%	\input{30}
+	\input{results}
 	
-	
-		\begin{frame}
-		\frametitle{22 августа, день 5}
-		\framesubtitle{м.н.~--- д.р. Джалпаккол~--- д.р. Кичкинекол Джалпаккольский} % Optional subtitle
-		\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
-			\begin{column}{0.45\textwidth} % Left column width
-				\begin{itemize}
-				\item Прохождение каменного лабиринта
-				\item Гроза
-				\end{itemize}
-				
-			\end{column}
-			\begin{column}{0.5\textwidth} % Right column width
-				\centering
-				\includegraphics[width=\linewidth]{../pics/mini_maps/22}
-			\end{column}
-		\end{columns}
-	\end{frame}
-	
-	\begin{frame}
-		\frametitle{22 августа, день 5}
-		\begin{minipage}{.5\textwidth}
-			\centering
-			\includegraphics[height=0.55\textheight]{../pics/DSC_1181}
-			
-			caption of figA
-			
-			\scriptsize\textcolor{red}{[Wu et al., Nature (2009)]}
-		\end{minipage}%
-		\begin{minipage}{.5\textwidth}
-			\centering
-			\includegraphics[height=0.55\textheight]{../pics/DSC_1181}
-			
-			caption of figB
-			
-			\scriptsize\textcolor{red}{[Tizio, Caio et al., Nature (2006)]}
-		\end{minipage}
-				\begin{minipage}{.5\textwidth}
-			\centering
-			\includegraphics[height=0.55\textheight]{../pics/DSC_1181}
-			
-			caption of figA
-			
-			\scriptsize\textcolor{red}{[Wu et al., Nature (2009)]}
-		\end{minipage}%
-		\begin{minipage}{.5\textwidth}
-			\centering
-			\includegraphics[height=0.55\textheight]{../pics/DSC_1181}
-			
-			caption of figB
-			
-			\scriptsize\textcolor{red}{[Tizio, Caio et al., Nature (2006)]}
-		\end{minipage}
-	\end{frame}
-
-	
-
+	\section{Выводы}
 	
 	%------------------------------------------------
 	
