@@ -19,3 +19,4 @@ latex-report/spravki/tmpb23hfvqx
 *.nav
 *.vrb
 *.snm
+!*route.pdf
